@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "checksums": {
     "Modulefile": "6b52a4320e78495c83a53761c5f8a9be",
-    "README.md": "018830b779c106fb94a0ac4b26d1c0d2",
+    "README.md": "24ce637a3397c1f733b1923915e5ba9f",
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
     "files/RPM-GPG-KEY-EPEL": "5cae203dcc391b87190191bce7ef9962",
     "files/RPM-GPG-KEY-EPEL-4": "5cae203dcc391b87190191bce7ef9962",

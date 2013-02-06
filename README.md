@@ -1,8 +1,17 @@
-# Configure UABGRID repositories
+# Configure Configures the Extra Packages for Enterprise Linux (EPEL) repositories
 
 # About
-Configures the UABGRID repository on EL clients
+Configures the Extra Packages for Enterprise Linux (EPEL) repository
+on Enterprise Linux (RHEL, CentOS) clients
 
+============================================
+Extra Packages for Enterprise Linux (EPEL) is a Fedora Special
+Interest Group that creates, maintains, and manages a high quality
+set of additional packages for Enterprise Linux, including, but
+not limited to, Red Hat Enterprise Linux (RHEL),CentOS and
+Scientific Linux (SL).
+http://fedoraproject.org/wiki/EPEL
+============================================
 ## New in 0.1.0
 
 Initial release. This module is based on the following puppetlabs module:
