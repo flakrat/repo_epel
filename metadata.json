@@ -8,6 +8,7 @@
   "summary": "Configures the EPEL Yum repository config to point to a local mirror on Enterprise Linux (RHEL, CentOS) clients",
   "version": "0.1.1",
   "checksums": {
+    "LICENSE": "2b42edef8fa55315f34f2370b4715ca9",
     "Modulefile": "ce6ccce57d79bdd75ac76e66c4cc3f04",
     "README.md": "24ce637a3397c1f733b1923915e5ba9f",
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
