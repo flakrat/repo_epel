@@ -1,0 +1,29 @@
+{
+  "name": "flakrat-repo_elrepo",
+  "author": "Mike Hanby",
+  "description": "Based off of http://github.com/stahnma/puppet-module-puppetlabs_yum\n\nThe ELRepo Project focuses on hardware related packages to enhance your experience\nwith Enterprise Linux.\n\nThis includes filesystem drivers, graphics drivers, network drivers, sound drivers,\nwebcam and video drivers.\n\nhttp://elrepo.org/tiki/tiki-index.php",
+  "license": "Apache License, Version 2.0",
+  "project_page": "https://github.com/flakrat/repo_elrepo",
+  "source": "https://github.com/flakrat/repo_elrepo.git",
+  "summary": "Configures the ELRepo Yum repository config to point to a local mirror for Enterprise Linux (RHEL, CentOS) clients",
+  "version": "0.1.0",
+  "checksums": {
+    "LICENSE": "2b42edef8fa55315f34f2370b4715ca9",
+    "Modulefile": "9cdecb74b46b54c59ffbb696c3e56a57",
+    "README.markdown": "19e87f9294eae5305cc636660c71022b",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "files/RPM-GPG-KEY-elrepo.org": "455c06e5324cfa4b036c38a815ffc465",
+    "lib/facter/os_maj_version.rb": "a1dd18a64d87e0b349f17a3c9b95dc0b",
+    "manifests/elrepo.pp": "1772038e05129debaf771dab79c3743f",
+    "manifests/extras.pp": "1311938021f125019d7e777ff2b7744b",
+    "manifests/init.pp": "505c257bc97e1f71192d014ff934855d",
+    "manifests/kernel.pp": "c685d48ba68097a2f20bdf89dd3447f8",
+    "manifests/params.pp": "c4c6a223d4bf766ebc34721160f5f227",
+    "manifests/rpm_gpg_key.pp": "ff89c3bf5d55369eacc674e3985e73f4",
+    "manifests/testing.pp": "7b0194bc24b01c044a4829aacef90409",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "tests/init.pp": "5ed6ce529922a63ed45c787a2022f926"
+  },
+  "dependencies": []
+}
