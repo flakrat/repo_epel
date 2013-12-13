@@ -10,7 +10,8 @@ class repo_epel::params {
 
   # There are some URL manipulations that have to happen based on exact OS type
   if $::osfamily == 'RedHat' {
-    $url = "http://164.111.161.5/repo/epel"
+    #$url = "http://164.111.161.5/repo/epel"
+    $url = "http://164.111.161.12/repo/epel"
     $ostype = 'EL'
     $urlbit = "${::os_maj_version}"
   }

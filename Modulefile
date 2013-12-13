@@ -1,10 +1,10 @@
 name 'flakrat-repo_epel'
 version '0.1.1'
 
-author 'flakrat'
+author 'Mike Hanby'
 license 'Apache License, Version 2.0'
-project_page ''
-source ''
+project_page 'https://github.com/flakrat/repo_epel'
+source 'https://github.com/flakrat/repo_epel.git'
 summary 'Configures the EPEL Yum repository config to point to a local mirror on Enterprise Linux (RHEL, CentOS) clients'
 description 'Based off of http://github.com/stahnma/puppet-module-puppetlabs_yum
 
