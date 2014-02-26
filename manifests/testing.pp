@@ -15,7 +15,7 @@ class repo_epel::testing  (
   }
   
   yumrepo { 'epel-testing':
-    baseurl  => "${url}/${urlbit}/${::architecture}",
+    baseurl  => "${repourl}/${urlbit}/${::architecture}",
     descr    => "Extra Packages for Enterprise Linux (EPEL) Testing Repository - EL${::os_maj_version} - ${::architecture}",
     enabled  => "${enabled}",
     gpgcheck => '1',

@@ -10,7 +10,7 @@ class repo_epel::params {
 
   # There are some URL manipulations that have to happen based on exact OS type
   if $::osfamily == 'RedHat' {
-    $url = "http://files.uabgrid.uab.edu/repo/epel"
+    $repourl= "http://files.uabgrid.uab.edu/repo/epel"
     $ostype = 'EL'
     $urlbit = "${::os_maj_version}"
   }
