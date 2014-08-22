@@ -5,27 +5,24 @@
 # === Parameters:
 #
 # $repourl::                       The base repo URL, if not specified defaults to the
-#                                  CentOS Mirror
+#                                  EPEL Mirror
 #                                  
-# $enable_base::                   Enable the CentOS Base Repo
+# $enable_epel::                   Enable the EPEL Repo
 #                                  type:boolean
 #
-# $enable_contrib::                Enable the CentOS User Contrib Repo
+# $enable_debuginfo::              Enable the EPEL Debuginfo Repo
 #                                  type:boolean
 #
-# $enable_cr::                     Enable the CentOS Continuous Release Repo
+# $enable_source::                 Enable the EPEL source Repo
 #                                  type:boolean
 #
-# $enable_extras::                 Enable the CentOS Extras Repo
+# $enable_testing::                Enable the EPEL testing Repo
 #                                  type:boolean
 #
-# $enable_plus::                   Enable the CentOS Plus Repo
+# $enable_testing_debuginfo::      Enable the EPEL testing debuginfo Repo
 #                                  type:boolean
 #
-# $enable_scl::                    Enable the CentOS SCL Repo
-#                                  type:boolean
-#
-# $enable_updates::                Enable the CentOS Updates Repo
+# $enable_testing_source::         Enable the EPEL testing source Repo
 #                                  type:boolean
 #
 # === Usage:
@@ -66,27 +63,6 @@ class repo_epel (
   if $::osfamily == 'RedHat' {
     include repo_epel::epel
     
-    file { "/etc/yum.repos.d/centos${::os_maj_version}.repo": ensure => absent, }
-    file { "/etc/yum.repos.d/CentOS-Base.repo": ensure => absent, }
-    file { "/etc/yum.repos.d/CentOS-Debuginfo.repo": ensure => absent, }
-    file { "/etc/yum.repos.d/CentOS-Media.repo": ensure => absent, }
-    
-    repo_epel::rpm_gpg_key{ "RPM-GPG-KEY-CentOS-${::os_maj_version}":
-      path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${::os_maj_version}",
-    }
-
-    file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${::os_maj_version}":
-      ensure => present,
-      owner  => 0,
-      group  => 0,
-      mode   => '0644',
-      source => "puppet:///modules/repo_epel/RPM-GPG-KEY-CentOS-${::os_maj_version}",
-    }
-
-  } else {
-      notice ("Your operating system ${::operatingsystem} does not need CentOS repositories")
-  }
-
     repo_epel::rpm_gpg_key{ "RPM-GPG-KEY-EPEL-${::os_maj_version}":
       path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::os_maj_version}",
     }
@@ -98,5 +74,9 @@ class repo_epel (
       mode   => '0644',
       source => "puppet:///modules/repo_epel/RPM-GPG-KEY-EPEL-${::os_maj_version}",
     }
+
+  } else {
+      notice ("Your operating system ${::operatingsystem} does not need EPEL repositories")
+  }
 
 }
