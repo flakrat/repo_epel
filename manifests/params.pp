@@ -24,6 +24,7 @@ class repo_epel::params {
   $repourl = $::lsbmajdistrelease ? {
     5         => 'mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-5&arch=$basearch',
     6         => 'mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch',
+    7         => 'mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch',
     default   => undef,
   }
   $enable_epel                    = true
