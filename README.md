@@ -12,6 +12,10 @@ not limited to, Red Hat Enterprise Linux (RHEL),CentOS and
 Scientific Linux (SL).
 http://fedoraproject.org/wiki/EPEL
 ============================================
+## New in 1.0.1
+
+Updated the module to allow for complete parameterization
+
 ## New in 0.1.0
 
 Initial release. This module is based on the following puppetlabs module:

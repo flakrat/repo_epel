@@ -33,5 +33,5 @@ class repo_epel::params {
   $enable_epel_testing_debuginfo  = false
   $enable_epel_testing_source     = false
   $ostype                         = 'EL'
-  $urlbit = "${::os_maj_version}"
+  $urlbit = "${::operatingsystemmajrelease}"
 }

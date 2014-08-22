@@ -5,14 +5,14 @@
 # Scientific Linux (SL).
 class repo_epel::epel inherits repo_epel::params {
   
-  #file { "/etc/yum.repos.d/epel${::os_maj_version}.repo": ensure => absent, }
+  #file { "/etc/yum.repos.d/epel${::operatingsystemmajrelease}.repo": ensure => absent, }
     
   yumrepo { 'epel':
     baseurl  => "${repourl}/${urlbit}/${::architecture}",
-    descr    => "Extra Packages for Enterprise Linux (EPEL) Repository - EL${::os_maj_version} - ${::architecture}",
+    descr    => "Extra Packages for Enterprise Linux (EPEL) Repository - EL${::operatingsystemmajrelease} - ${::architecture}",
     enabled  => '1',
     gpgcheck => '1',
-    gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::os_maj_version}",
+    gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
     priority => '11',
   }
 

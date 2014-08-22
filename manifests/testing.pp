@@ -16,10 +16,10 @@ class repo_epel::testing  (
   
   yumrepo { 'epel-testing':
     baseurl  => "${repourl}/${urlbit}/${::architecture}",
-    descr    => "Extra Packages for Enterprise Linux (EPEL) Testing Repository - EL${::os_maj_version} - ${::architecture}",
+    descr    => "Extra Packages for Enterprise Linux (EPEL) Testing Repository - EL${::operatingsystemmajrelease} - ${::architecture}",
     enabled  => "${enabled}",
     gpgcheck => '1',
-    gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::os_maj_version}",
+    gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
     priority => '11',
   }
 

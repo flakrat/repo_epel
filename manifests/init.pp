@@ -33,14 +33,14 @@
 # * Advanced usage:
 #
 #   class {'repo_epel':
-#     repourl       => 'http://myrepo/centos',
-#     enable_scl    => true,
+#     repourl       => 'http://myrepo/epel',
+#     enable_epel_testing    => true,
 #   }
 #
 # * Alternate usage via hiera YAML:
 #
-#   repo_epel::repourl: 'http://myrepo/centos'
-#   repo_epel::enable_scl: true
+#   repo_epel::repourl: 'http://myrepo/epel'
+#   repo_epel::enable_epel_testing: true
 #
 class repo_epel (
     $repourl                       = $repo_epel::params::repourl,
@@ -63,16 +63,16 @@ class repo_epel (
   if $::osfamily == 'RedHat' {
     include repo_epel::epel
     
-    repo_epel::rpm_gpg_key{ "RPM-GPG-KEY-EPEL-${::os_maj_version}":
-      path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::os_maj_version}",
+    repo_epel::rpm_gpg_key{ "RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}":
+      path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
     }
 
-    file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::os_maj_version}":
+    file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}":
       ensure => present,
       owner  => 0,
       group  => 0,
       mode   => '0644',
-      source => "puppet:///modules/repo_epel/RPM-GPG-KEY-EPEL-${::os_maj_version}",
+      source => "puppet:///modules/repo_epel/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
     }
 
   } else {
