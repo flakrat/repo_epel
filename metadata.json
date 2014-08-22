@@ -6,26 +6,31 @@
     "files/RPM-GPG-KEY-EPEL-5": "5cae203dcc391b87190191bce7ef9962",
     "files/RPM-GPG-KEY-EPEL-6": "b3956578dbc4a117ba474ef92b1c8c13",
     "lib/facter/os_maj_version.rb": "a1dd18a64d87e0b349f17a3c9b95dc0b",
-    "Modulefile": "e53e92a65c9104633ee3b551d6d6a954",
+    "Modulefile": "b2e701c419552f0680a3d9078ad9740c",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "tests/init.pp": "0c81b5cc228e0b0ed7e0c42def11fff9",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
     "manifests/rpm_gpg_key.pp": "6a5dae25215f132e81563fe7e34b88ef",
     "LICENSE": "2b42edef8fa55315f34f2370b4715ca9",
-    "manifests/params.pp": "80f817c1d2246d95e2470495818ae92f",
-    "manifests/init.pp": "7c552090d4a6db726fc7c0f3ac540355",
+    "manifests/params.pp": "97540e916e627f98cd2e8a0a6be1780b",
+    "manifests/init.pp": "1fa1792b0f6c3073f6f8997ecc7833ee",
     "files/RPM-GPG-KEY-EPEL": "5cae203dcc391b87190191bce7ef9962",
     "manifests/testing.pp": "da202289148d6c3a82c7044173d635cb",
     "manifests/epel.pp": "c00716c96685ad676c3c12d4b6350118",
     "README.md": "24ce637a3397c1f733b1923915e5ba9f"
   },
-  "dependencies": [],
-  "description": "Based off of http://github.com/stahnma/puppet-module-puppetlabs_yum\n\nManages the EPEL repository\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nExtra Packages for Enterprise Linux (or EPEL) is a Fedora Special\nInterest Group that creates, maintains, and manages a high quality\nset of additional packages for Enterprise Linux, including, but\nnot limited to, Red Hat Enterprise Linux (RHEL),CentOS and\nScientific Linux (SL).\nhttp://fedoraproject.org/wiki/EPEL\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d 2.0.0"
+    }
+  ],
+  "description": "Puppet Module to manage the EPEL repositories on RHEL/CentOS clients (currently supports EL releases 5 and 6).\n\nTODO:\n * Make yum priorities configurable\n\nOriginally based off of http://github.com/stahnma/puppet-module-puppetlabs_yum\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nExtra Packages for Enterprise Linux (or EPEL) is a Fedora Special\nInterest Group that creates, maintains, and manages a high quality\nset of additional packages for Enterprise Linux, including, but\nnot limited to, Red Hat Enterprise Linux (RHEL),CentOS and\nScientific Linux (SL).\nhttp://fedoraproject.org/wiki/EPEL\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d",
   "license": "Apache License, Version 2.0",
   "name": "flakrat-repo_epel",
   "project_page": "https://github.com/flakrat/repo_epel",
   "source": "https://github.com/flakrat/repo_epel.git",
   "summary": "Configures the EPEL Yum repository config to point to a local mirror on Enterprise Linux (RHEL, CentOS) clients",
   "types": [],
-  "version": "0.1.1"
+  "version": "1.0.0"
 }

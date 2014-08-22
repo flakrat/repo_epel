@@ -1,14 +1,17 @@
 name 'flakrat-repo_epel'
-version '0.1.1'
+version '1.0.0'
 
 author 'Mike Hanby'
 license 'Apache License, Version 2.0'
 project_page 'https://github.com/flakrat/repo_epel'
 source 'https://github.com/flakrat/repo_epel.git'
 summary 'Configures the EPEL Yum repository config to point to a local mirror on Enterprise Linux (RHEL, CentOS) clients'
-description 'Based off of http://github.com/stahnma/puppet-module-puppetlabs_yum
+description 'Puppet Module to manage the EPEL repositories on RHEL/CentOS clients (currently supports EL releases 5 and 6).
 
-Manages the EPEL repository
+TODO:
+ * Make yum priorities configurable
+
+Originally based off of http://github.com/stahnma/puppet-module-puppetlabs_yum
 
 ============================================
 Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special
@@ -18,3 +21,4 @@ not limited to, Red Hat Enterprise Linux (RHEL),CentOS and
 Scientific Linux (SL).
 http://fedoraproject.org/wiki/EPEL
 ============================================'
+dependency 'puppetlabs/stdlib', '>= 2.0.0'
