@@ -4,20 +4,26 @@
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
     "files/RPM-GPG-KEY-EPEL-4": "5cae203dcc391b87190191bce7ef9962",
     "files/RPM-GPG-KEY-EPEL-5": "5cae203dcc391b87190191bce7ef9962",
+    "manifests/source.pp": "447ec231bd295cdb2f2b5f889607ce04",
     "files/RPM-GPG-KEY-EPEL-6": "b3956578dbc4a117ba474ef92b1c8c13",
+    "manifests/testing_source.pp": "d77da9dea5cae1dc8c2ce33d225d24c5",
     "lib/facter/os_maj_version.rb": "a1dd18a64d87e0b349f17a3c9b95dc0b",
-    "Modulefile": "b2e701c419552f0680a3d9078ad9740c",
+    "files/RPM-GPG-KEY-EPEL-7": "58fa8ae27c89f37b08429f04fd4a88cc",
+    "Modulefile": "4b109453809453a143e7bf22f438ce53",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "tests/init.pp": "0c81b5cc228e0b0ed7e0c42def11fff9",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
-    "manifests/rpm_gpg_key.pp": "6a5dae25215f132e81563fe7e34b88ef",
+    "manifests/rpm_gpg_key.pp": "6f97003820c9a6b142648acafa8d4a87",
     "LICENSE": "2b42edef8fa55315f34f2370b4715ca9",
-    "manifests/params.pp": "97540e916e627f98cd2e8a0a6be1780b",
-    "manifests/init.pp": "1fa1792b0f6c3073f6f8997ecc7833ee",
+    "manifests/params.pp": "0349a640a5cd4c109ce0ad64cf88768d",
+    "files/RPM-GPG-KEY-elrepo.org": "455c06e5324cfa4b036c38a815ffc465",
+    "manifests/debuginfo.pp": "ef67d7d5ffae63794e10ca5795fc7e88",
+    "manifests/init.pp": "622a6b5c3a623dbebf6b793ad659edc1",
     "files/RPM-GPG-KEY-EPEL": "5cae203dcc391b87190191bce7ef9962",
-    "manifests/testing.pp": "da202289148d6c3a82c7044173d635cb",
-    "manifests/epel.pp": "c00716c96685ad676c3c12d4b6350118",
-    "README.md": "24ce637a3397c1f733b1923915e5ba9f"
+    "manifests/testing_debuginfo.pp": "5cc0dd17012b07c2c76327f370956b6a",
+    "manifests/testing.pp": "07f7dd475817a58618739eeffa057162",
+    "manifests/epel.pp": "10eea768208741d51bbd14ca2a3f5c76",
+    "README.md": "3a3506eae6a7cd7eebc846ae82bbca18"
   },
   "dependencies": [
     {
@@ -32,5 +38,5 @@
   "source": "https://github.com/flakrat/repo_epel.git",
   "summary": "Configures the EPEL Yum repository config to point to a local mirror on Enterprise Linux (RHEL, CentOS) clients",
   "types": [],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

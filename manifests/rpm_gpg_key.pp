@@ -1,4 +1,4 @@
-# Imports GPG keys associated with Puppet Labs Yum Repositories
+# Imports GPG keys associated
 define repo_epel::rpm_gpg_key($path) {
   # Given the path to a key, see if it is imported, if not, import it
   exec {  "import-${name}":

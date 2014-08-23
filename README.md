@@ -12,6 +12,13 @@ not limited to, Red Hat Enterprise Linux (RHEL),CentOS and
 Scientific Linux (SL).
 http://fedoraproject.org/wiki/EPEL
 ============================================
+## New in 1.0.2
+
+Fixed some typo related bugs
+Added the debuginfo, source, testing-debuginfo and testing-source repos
+Removed some manifest files that were accidentally included in 1.0.1 that
+accidently included and not related to repo_epel
+
 ## New in 1.0.1
 
 Updated the module to allow for complete parameterization

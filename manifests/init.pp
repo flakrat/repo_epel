@@ -45,20 +45,20 @@
 class repo_epel (
     $repourl                       = $repo_epel::params::repourl,
     $enable_epel                   = $repo_epel::params::enable_epel,
-    $enable_debuginfo              = $repo_epel::params::enable_epel_debuginfo,
-    $enable_source                 = $repo_epel::params::enable_epel_source,
-    $enable_testing                = $repo_epel::params::enable_epel_testing,
-    $enable_testing_debuginfo      = $repo_epel::params::enable_epel_testing_debuginfo,
-    $enable_testing_source         = $repo_epel::params::enable_epel_testing_source,
+    $enable_debuginfo              = $repo_epel::params::enable_debuginfo,
+    $enable_source                 = $repo_epel::params::enable_source,
+    $enable_testing                = $repo_epel::params::enable_testing,
+    $enable_testing_debuginfo      = $repo_epel::params::enable_testing_debuginfo,
+    $enable_testing_source         = $repo_epel::params::enable_testing_source,
   ) inherits repo_epel::params {
 
   validate_string($repourl)
   validate_bool($enable_epel)
-  validate_bool($enable_epel_debuginfo)
-  validate_bool($enable_epel_source)
-  validate_bool($enable_epel_testing)
-  validate_bool($enable_epel_testing_debuginfo)
-  validate_bool($enable_epel_testing_source)
+  validate_bool($enable_debuginfo)
+  validate_bool($enable_source)
+  validate_bool($enable_testing)
+  validate_bool($enable_testing_debuginfo)
+  validate_bool($enable_testing_source)
   
   if $::osfamily == 'RedHat' {
     include repo_epel::epel

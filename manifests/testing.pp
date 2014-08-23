@@ -3,24 +3,22 @@
 # set of additional packages for Enterprise Linux, including, but
 # not limited to, Red Hat Enterprise Linux (RHEL),CentOS and
 # Scientific Linux (SL).
+#
 # epel-testing is for packages not yet deemed stable
-class repo_epel::testing  (
-  $enable_testing = false,
-) inherits repo_epel::params {
+class repo_epel::testing inherits repo_epel {
 
-  if $enable_testing {
+  if $repo_epel::enable_testing {
     $enabled = 1
   } else {
     $enabled = 0
   }
-  
+
   yumrepo { 'epel-testing':
-    baseurl  => "${repourl}/${urlbit}/${::architecture}",
-    descr    => "Extra Packages for Enterprise Linux (EPEL) Testing Repository - EL${::operatingsystemmajrelease} - ${::architecture}",
+    baseurl  => "${repourl}/testing/${urlbit}/${::architecture}",
+    descr    => "Extra Packages for Enterprise Linux (EPEL) Repository - Testing - EL${::operatingsystemmajrelease} - ${::architecture}",
     enabled  => "${enabled}",
     gpgcheck => '1',
     gpgkey   => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-${::operatingsystemmajrelease}",
-    priority => '11',
   }
 
 }
