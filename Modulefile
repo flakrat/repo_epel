@@ -1,5 +1,5 @@
 name 'flakrat-repo_epel'
-version '1.0.2'
+version '1.0.3'
 
 author 'Mike Hanby'
 license 'Apache License, Version 2.0'
