@@ -18,7 +18,7 @@
     "manifests/params.pp": "0349a640a5cd4c109ce0ad64cf88768d",
     "files/RPM-GPG-KEY-elrepo.org": "455c06e5324cfa4b036c38a815ffc465",
     "manifests/debuginfo.pp": "ef67d7d5ffae63794e10ca5795fc7e88",
-    "manifests/init.pp": "622a6b5c3a623dbebf6b793ad659edc1",
+    "manifests/init.pp": "1e3fb5c1642d33820680e18dcc0e45e5",
     "files/RPM-GPG-KEY-EPEL": "5cae203dcc391b87190191bce7ef9962",
     "manifests/testing_debuginfo.pp": "5cc0dd17012b07c2c76327f370956b6a",
     "manifests/testing.pp": "07f7dd475817a58618739eeffa057162",

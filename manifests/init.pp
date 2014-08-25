@@ -34,13 +34,13 @@
 #
 #   class {'repo_epel':
 #     repourl       => 'http://myrepo/epel',
-#     enable_epel_testing    => true,
+#     enable_testing    => true,
 #   }
 #
 # * Alternate usage via hiera YAML:
 #
 #   repo_epel::repourl: 'http://myrepo/epel'
-#   repo_epel::enable_epel_testing: true
+#   repo_epel::enable_testing: true
 #
 class repo_epel (
     $repourl                       = $repo_epel::params::repourl,
